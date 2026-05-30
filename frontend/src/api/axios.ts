@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL:
-    "https://smart-leads-dashboard-pfne.onrender.com/api",
+    baseURL:
+  "http://localhost:5000/api",
 });
 
 API.interceptors.request.use(
