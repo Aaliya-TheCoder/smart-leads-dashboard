@@ -42,13 +42,16 @@ const Register = () => {
 
             navigate("/");
         } catch (error: any) {
-
-            console.log(error);
-
-            alert(
-                error.response?.data?.message
-            );
-        }
+  console.log("Full error:", error);
+  console.log("Response:", error.response);
+  
+  const message =
+    error.response?.data?.message ||
+    error.message ||
+    "Something went wrong";
+    
+  alert(message);
+}
     };
 
     return (
